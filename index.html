@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      font-family:'Lexend Deca',sans-serif ;
+      --var-colsedan:hsl(31, 77%, 52%);
+      --var-colsuv:hsl(184,100%,22%);
+      --var-collux:hsl(179, 100%, 13%);
+      box-sizing: border-box;
+    }
+    h1{
+      font-family: 'Big Shoulders Display',sans-serif;
+      color:hsl(0, 0%, 95%);
+    }
+    .container{
+      width:100%;
+      align-items: center;
+      justify-content: center;
+      min-height:95vh;
+      display: flex;
+    }
+    p{
+      color: hsla(0, 0%, 100%,.75);
+    }
+    .btn{
+      width: 8rem;
+      padding: 1rem;
+      border: none;
+      border-radius: 1.5rem;
+      background-color:hsl(0, 0%, 95%);
+      transition: all 200ms ease;
+    }
+    .btn:hover{
+      outline: 2px solid white;
+      background-color: inherit;
+      color: white;
+    }
+    .btn1{
+      color: var(--var-colsedan);
+    }
+    .btn2{
+      color: var(--var-colsuv);
+    }
+    .btn3{
+      color: var(--var-collux);
+    }
+    .sect{
+      width: 14rem;
+      height: 400px;
+      display: flex;
+      padding: 1.8rem;
+      flex-flow: column;
+      justify-content:space-between;
+      align-items: flex-start;
+      text-align: left;
+      
+    }
+    .sedan{
+      background-color: var(--var-colsedan);
+      border-radius: .5rem 0 0 .5rem;
+    }
+    .suv{
+      background-color: var(--var-colsuv);
+    }
+    .lux{
+      background-color:var(--var-collux);
+      border-radius: 0 .5rem .5rem 0;
+    }
+    @media screen and (max-width:540px) {
+      .container{
+        display: flex;
+        flex-direction: column;
+      }
+      .sect{
+        width:90% ;
+      }
+      .sedan{
+        border-radius: .5rem .5rem 0 0;
+      }
+      .lux{
+        border-radius:0 0 .5rem .5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <div class="sedan sect">
+      <img src="./images/icon-sedans.svg" alt="">
+      <h1>Sedans</h1>
+      <p>a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+      or on your next road trip.</p>
+      <button class="btn btn1">Learn More</button>
+    </div>
+    <div class="suv sect">
+      <img src="./images/icon-suvs.svg" alt="">
+       <h1>SUVs</h1>
+       <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+       and off-road adventures.</p>
+       <button class="btn btn2">Learn More</button>
+      </div>
+     <div class="lux sect">
+       <img src="./images/icon-luxury.svg" alt="">
+       <h1>Luxury</h1>
+       <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+       rental and arrive in style.</p>
+       <button class="btn btn3">Learn More</button>
+      </div>
+  </div>
+</body>
+</html>
